@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import store from './store'
+store.dispatch({
+  type: "bugAdded",
+  payload: {
+    description: "Bug1"
+  }
+});
 
-
-ReactDOM.render(<App />, document.getElementById('root'));
-
+console.log(store.getState());
